@@ -1,0 +1,13 @@
+digraph G {
+            main [shape=box]; /* this is a comment */
+            main -> parse [weight=8];
+            parse -> execute;
+            main -> init [style=dotted];
+            main -> cleanup;
+            execute -> make_string;
+            init -> make_string;
+            main -> printf [style=bold,label=];
+            make_string [label="make a\nstring"];
+            node [shape=box,style=filled,color=".7 .3 1.0"];
+            execute -> compare;
+         }
